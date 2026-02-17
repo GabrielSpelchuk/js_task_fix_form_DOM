@@ -2,16 +2,16 @@
 
 // write code here
 
-const inputs = [...document.querySelectorAll('input')];
+const inputs = [...document.querySelectorAll('form input')];
 
 for (const input of inputs) {
   const label = document.createElement('label');
-  const surrender = input.name[0].toUpperCase() + input.name.slice(1);
+  const capitalizedName = input.name[0].toUpperCase() + input.name.slice(1);
 
   label.classList.add('field-label');
   label.htmlFor = input.id;
-  label.textContent = surrender;
+  label.textContent = capitalizedName;
 
-  input.placeholder = surrender;
+  input.placeholder = capitalizedName;
   input.parentNode.append(label);
 }
